@@ -130,6 +130,37 @@ visualize_patterns_line(bottom_wear_result, 'Bottom Wear')
 visualize_patterns_line(party_wear_result, 'Party Wear')
 ```
 ### Output:
+![image](https://github.com/Janani-2003/WDM_EXP3/assets/94288340/56fc4fac-b89b-44af-a1eb-024085ac8fa1)
 
+#### Visualization:
+```
+import matplotlib.pyplot as plt
+
+# Function to visualize frequent sequential patterns with a line plot
+def visualize_patterns_line(result, category):
+    if result:
+        patterns = list(result.keys())
+        support = list(result.values())
+
+        plt.figure(figsize=(10, 6))
+        plt.plot([str(pattern) for pattern in patterns], support, marker='o', linestyle='-', color='blue')
+        plt.xlabel('Patterns')
+        plt.ylabel('Support Count')
+        plt.title(f'Frequent Sequential Patterns - {category}')
+        plt.xticks(rotation=90)
+        plt.tight_layout()
+        plt.show()
+    else:
+        print(f"No frequent sequential patterns found in {category}.")
+
+# Visualize frequent sequential patterns for each category using a line plot
+visualize_patterns_line(top_wear_result, 'Top Wear')
+visualize_patterns_line(bottom_wear_result, 'Bottom Wear')
+visualize_patterns_line(party_wear_result, 'Party Wear')
+```
+### OUTPUT:
+![image](https://github.com/Janani-2003/WDM_EXP3/assets/94288340/dfecfae4-679b-44e3-9471-ecb351c93b73)
+![image](https://github.com/Janani-2003/WDM_EXP3/assets/94288340/b66280e6-d8b0-41b3-9a94-e476f0519a3e)
 
 ### Result:
+Thus, the Implementation of GSP Algorithm In Python has been succesfully executed.
